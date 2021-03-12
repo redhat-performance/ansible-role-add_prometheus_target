@@ -1,0 +1,30 @@
+galaxy_info:
+  role_name: add_prometheus_target
+  author: Jan Hutař
+  description: Ansible role to manipulate our Prometheus exporter scrape targets
+  company: Red Hat
+
+  issue_tracker_url: https://github.com/redhat-performance/ansible-role-add_prometheus_target/issues
+
+  license: GPLv3
+
+  min_ansible_version: 1.9
+
+  # platforms is a list of platforms, and each platform has a name and a list of versions.
+  #
+  # platforms:
+  # - name: Fedora
+  #   versions:
+  #   - all
+  #   - 25
+  # - name: SomePlatform
+  #   versions:
+  #   - all
+  #   - 1.0
+  #   - 7
+  #   - 99.99
+
+  galaxy_tags:
+    - prometheus
+
+dependencies: []
