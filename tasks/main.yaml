@@ -6,5 +6,5 @@
     marker: "# {mark} ANSIBLE MANAGED BLOCK for {{ hostvar['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}"
     block: |
        - targets:
-           - {{ ansible_host|default(inventory_hostname) }}:{{ exporter_port }}
+           - {{ hostvar['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}
 ...
