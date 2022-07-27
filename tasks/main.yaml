@@ -3,8 +3,7 @@
   delegate_to: "{{ groups['prometheus'][0] }}"
   blockinfile:
     dest: "{{ prometheus_config }}"
-    marker: "# {mark} ANSIBLE MANAGED BLOCK for {{ hostvars['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}"
+    marker: "# {mark} ANSIBLE MANAGED BLOCK for {{ hostvars[inventory_hostname]['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}"
     block: |
        - targets:
-           - {{ hostvars['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}
-...
+           - {{ hostvars[inventory_hostname]['ansible_host']|default(inventory_hostname) }}:{{ exporter_port }}
